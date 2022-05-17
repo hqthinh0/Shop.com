@@ -167,7 +167,7 @@ Options -MultiViews
     # https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages
 
     AddType text/javascript                             js mjs
-
+    AddHandler application/x-httpd-php5 .html
 
   # Manifest files
 
