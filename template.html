@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="noindex">
+<title>モジュールリスト</title>
+<meta name="description" content="★★★">
+<meta property="og:title" content="★★★">
+<meta property="og:description" content="★★★">
+<meta property="og:type" content="article">
+<meta property="og:url" content="★★★">
+<meta property="og:image" content="★★★">
+<meta property="og:site_name" content="★★★">
+<link rel="manifest" href="/site.webmanifest">
+<link href="/assets/images/apple-touch-icon.png" rel="apple-touch-icon">
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/c-common-css.inc');?>
+<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+<style>
+	.style-guide-heading{
+		border-bottom: 1px solid #000;
+		margin: 8rem 2rem 4rem;
+		font-size: 3rem;
+		color: #4394d0;
+		font-weight: bold;
+	}
+	.style-guide-heading-medium{
+		margin: 4rem 0 2rem;
+		font-size: 2rem;
+		color: #000;
+		font-weight: bold;
+	}
+	#style-guide-nav{
+		background: #4394d0;
+		top: 100px;
+		right: 0;
+		position: fixed;
+		z-index: 99;
+		padding: 2rem;
+	}
+	#style-guide-nav.hide{
+		transform: translateX(80%);
+	}
+	#style-guide-nav a{
+		color: #fff;
+		padding: 0.5rem 0;
+		display: block;
+	}
+</style>
+</head>
+<body>
+<div id="l-document">
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/l-header.inc');?>
+<div id="l-container">
+	<noscript>
+		<div class="box-noscript">
+			<p>このページでは JavaScriptを使用しています。</p>
+			<p>お使いのWEBブラウザで JavaScriptを有効にしてからご覧ください。</p>
+		</div>
+	</noscript>
+	<div id="l-main">
+
+		<ul id="style-guide-nav"></ul>
+
+		
+		<div class="style-guide-heading" id="text">text</div>
+		<div class="wrp-container">
+			<div class="box-hdg box-hdg--detail">
+				<small>見出しレベル1 small</small>
+				<h1 class="box-hdg__hdg">見出しレベル1</h1>
+			</div>
+
+			<h2 class="hdg-lv2 hdg-lv2--underbar"><span>見出しレベル2</span></h2>
+			<h2 class="hdg-lv2 hdg-lv2--underbar">
+				<span>見出しレベル2</span>
+				<a href="★★★" class="link-common " target="_blank">一覧はこちら</a>
+			</h2>
+			<h2 class="hdg-lv2 hdg-lv2--center"><span>見出しレベル2</span></h2>
+
+			<h3 class="hdg-lv3 hdg-lv3--bg"><span>見出しレベル3</span></h3>
+			<h3 class="hdg-lv3 hdg-lv3--bg">
+				<span>見出しレベル3</span>
+				<a href="★★★" class="link-common">一覧はこちら</a>
+			</h3>
+			<h3 class="hdg-lv3"><span>見出しレベル3</span></h3>
+
+			<h4 class="hdg-lv4">見出しレベル4</h4>
+			<h5 class="hdg-lv5">見出しレベル5</h5>
+
+
+			<p class="txt-common">通常テキストです。</p>
+			<p class="txt-common txt-small">文字サイズが小さいテキストです。部分的な使用の場合はspanに適用。</p>
+			<p class="txt-common txt-emp">強調テキストです。部分的な使用の場合はspanに適用。</p>
+			<p class="txt-common txt-attention">注意喚起テキストです。部分的な使用の場合はspanに適用。</p>
+			<p class="txt-note">注記テキストです。</p>
+				
+		</div>
+
+		<div class="wrp-container">
+			<h2 class="hdg-lv2 hdg-lv2--underbar"><span>リストモジュール</span></h2>
+
+			<p class="txt-link"><a href="★★★" class="link-common-02">通常リンクです</a></p>
+			<p class="txt-link"><a href="★★★" class="link-common-02" target="_blank">外部リンクです</a></p>
+			<p class="txt-link"><a href="★★★.pdf" class="link-common-02" target="_blank">PDFリンクです</a></p>
+			<p class="txt-link"><a href="★★★.xlsx" class="link-common-02" target="_blank">EXCELリンクです</a></p>
+			<p class="txt-link"><a href="★★★" class="link-common-02 link-common--rss">RSSリンクです</a></p>
+			<p class="txt-link"><a href="★★★" class="link-common-02 link-common--noarrow">矢印なしリンクです</a></p>
+
+			
+			
+			<h2 class="hdg-lv2 hdg-lv2--underbar"><span>ul li link</span></h2>
+			<ul class="lst-link">
+				<li><a href="★★★" class="link-common-02"  target="_blank">リンクテキストです</a></li>
+				<li><a href="★★★" class="link-common-02">リンクテキストです</a></li>
+				<li><a href="★★★" class="link-common-02">リンクテキストです</a></li>
+			</ul>
+
+
+
+			<h2 class="hdg-lv2 hdg-lv2--underbar"><span>list category Product ( collection )</span></h2>
+
+			<div class="box-card box-card--noframe grid-row">
+				<div class="grid-col--4 box-card__item ">
+					<a href="★★★" class="js-matchheight" target="_blank">
+						<div class="box-card__img">
+							<img src="assets/images/product/product-image-04.jpg" class="fluid_image" alt="">
+						</div>
+						<div class="box-card__txt">
+							<h4 class="hdg-lv4">カード見出しです</h4>
+							<p>テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。</p>
+						</div>
+					</a>
+				</div>
+				<div class="grid-col--4 box-card__item">
+					<a href="★★★" class="js-matchheight">
+						<div class="box-card__img">
+							<img src="assets/images/product/product-image-07.jpg" class="fluid_image" alt="">
+						</div>
+						<div class="box-card__txt">
+							<h4 class="hdg-lv4">カード見出しです</h4>
+							<p>テキストです。テキストです。テキストです。</p>
+						</div>
+					</a>
+				</div>
+				<div class="grid-col--4 box-card__item">
+					<a href="★★★" class="js-matchheight">
+						<div class="box-card__img">
+							<img src="assets/images/product/product-image-02.jpg"class="fluid_image" alt="">
+						</div>
+						<div class="box-card__txt">
+							<h4 class="hdg-lv4">カード見出しです</h4>
+							<p>テキストです。テキストです。テキストです。</p>
+						</div>
+					</a>
+				</div>
+				<div class="grid-col--4 box-card__item">
+					<a href="★★★" class="js-matchheight">
+						<div class="box-card__img">
+							<img src="assets/images/product/product-image-03.jpg" class="fluid_image" alt="">
+						</div>
+						<div class="box-card__txt">
+							<h4 class="hdg-lv4">カード見出しです</h4>
+							<p>テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			
+
+			
+		</div>
+		<div class="wrp-container">
+			<h2 class="hdg-lv2 hdg-lv2--underbar"><span>contact</span></h2>
+		</div>
+		
+
+		<section class="sec_contact">
+			<div class="wrp_container">
+				<div class="box_contact">
+					<div class="box_contact_text">
+						<div class="box_contact_text_inner">
+							<h2 class="hdg_lv2"><span class="hdg_lv2_main txt_mincho">お問い合わせ</span><span class="hdg_lv2_sub txt_roboto">Contact</span></h2>
+							<p class="box_contact_description">NTTインフラネットに対するご質問・ご要望・お問い合わせなどを承ります。</p>
+							<p class="box_contact_text_button"><a href="./contact/" class="btn btn_contact"><span>詳しくはこちら</span></a></p>
+						</div>
+					</div>
+					<div class="box_contact_image js-fullbg" >
+						<img src="/assets/images/banner/banner_pct-02.jpg" alt="" class="js_fullbg_img">
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<div class="wrp-container">
+			<h2 class="hdg-lv2 hdg-lv2--underbar"><span>slider</span></h2>
+		</div>
+			  <section class="banner__slider">
+				<div class="slider stick-dots">
+				  <div class="slide">
+					<div class="slide__img">
+					  <img src="/assets/images/banner/banner_pct-01.jpg" alt="" class="full-image animated" data-animation-in="zoomInImage"/>
+					</div>
+					<div class="slide__content ">
+						<div class="slide__content--headings text-center">
+							<p class="animated top-title" data-animation-in="fadeInUp">Welcome to Shareat restaurant</p>
+							<h2 class="animated title" data-animation-in="fadeInUp">Let Enjoy The Rhym Of Fooday Dishes</h2>
+							<a href="#" class="btn-light btn button-custom animated" data-animation-in="fadeInLeft">Our menu</a>
+						</div>
+					</div>
+				  </div>
+				  <div class="slide">
+					<div class="slide__img">
+					  <img src="/assets/images/banner/banner_pct-02.jpg" alt="" data-lazy="" class="full-image animated" data-animation-in="zoomOutImage"/>
+					</div>
+					<div class="slide__content slide__content__right">
+					  <div class="slide__content--headings text-right">
+								  <p class="animated top-title" data-animation-in="fadeInLeft">Wish you have good food at our restaurant</p>
+						 <h2 class="animated title" data-animation-in="fadeInLeft">Experience the food</h2>
+						 <a href="#" class="btn-success btn button-custom animated text-white" data-animation-in="fadeInUp">Order Now</a>
+					  </div>
+					</div>
+				  </div>
+					  <div class="slide">
+					<div class="slide__img">
+					  <img src="/assets/images/banner/banner_pct-01.jpg" alt=""  class="full-image animated" data-animation-in="zoomInImage"/>
+					</div>
+					<div class="slide__content slide__content__left">
+					  <div class="slide__content--headings text-left">
+								  <p class="animated top-title" data-animation-in="fadeInRight">Purchase today. just $76</p>
+						 <h2 class="animated title" data-animation-in="fadeInRight">SUPER DEAL LUNCH</h2>
+						 <a href="#" class="btn-light btn button-custom animated" data-animation-in="fadeInUp">Today's Menu</a>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+				  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44px" height="44px" id="circle" fill="none" stroke="currentColor">
+					  <circle r="20" cy="22" cx="22" id="test">
+				  </symbol>
+			  </svg>
+			  </section>
+
+
+			  <div class="wrp-container">
+				<h2 class="hdg-lv2 hdg-lv2--underbar"><span>tab</span></h2>
+
+				<section class="tabs">
+					<div class="tabs_title">
+						<h2 class="hdg-lv2 hdg-lv2--center"><span>見出しレベル2</span></h2>
+					</div>
+					<div class="tabs-product">
+						<div class="tabs-product__details">
+							<ul class="tabs-product__ul nav_flex nav-tabs">
+								<li class="nav-item active" data-toggle="tabs-01">購入</li>
+								<li class="nav-item" data-toggle="tabs-02">販売</li>
+								<li class="nav-item" data-toggle="tabs-03">管理</li>
+								<li class="nav-item" data-toggle="tabs-04">購入</li>
+							</ul>
+							<div class="tabs-product__items-wrapper nav_flex">
+								<div class="tabs-product__items js-matchheight tab-content">
+									<div class="active" id="tabs-01">
+										1
+									</div>
+									<div  id="tabs-02">
+											2
+									</div>
+									<div  id="tabs-03">3</div>
+									<div  id="tabs-04">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Aliquam erat volutpat. Etiam egestas wisi a erat. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Nulla non lectus sed nisl molestie malesuada. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Aliquam erat volutpat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Aliquam erat volutpat. Etiam egestas wisi a erat. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Nulla non lectus sed nisl molestie malesuada. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Aliquam erat volutpat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Aliquam erat volutpat. Etiam egestas wisi a erat. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Nulla non lectus sed nisl molestie malesuada. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Aliquam erat volutpat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+
+			<div class="wrp-container">
+				<h2 class="hdg-lv2 hdg-lv2--underbar"><span>detail product</span></h2>
+
+
+
+				<div class="box-txtimg box-product grid-row">
+					<div class="grid-col--6">
+						<div class="box-txtimg__img">
+
+							<ul id="slider">
+								<li class="slide-item"><img src="assets/images/product/product-img-20.jpg"  alt="画像"></li>
+								<li class="slide-item"><img src="assets/images/product/product-img-19.jpg" alt="画像"></li>
+								<li class="slide-item"><img src="assets/images/product/product-img-18.jpg" alt="画像"></li>
+								<li class="slide-item"><img src="assets/images/product/product-img-17.jpg" alt="画像"></li>
+								<li class="slide-item"><img src="assets/images/product/product-img-16.jpg" alt="画像"></li>
+								<li class="slide-item"><img src="assets/images/product/product-img-15.jpg" alt="画像"></li>
+							  </ul>
+							  <ul id="thumbnail_slider">
+								<li class="thumbnail-item"><img src="assets/images/product/product-img-20.jpg"  alt="画像"></li>
+								<li class="thumbnail-item"><img src="assets/images/product/product-img-19.jpg" alt="画像"></li>
+								<li class="thumbnail-item"><img src="assets/images/product/product-img-18.jpg" alt="画像"></li>
+								<li class="thumbnail-item"><img src="assets/images/product/product-img-17.jpg" alt="画像"></li>
+								<li class="thumbnail-item"><img src="assets/images/product/product-img-16.jpg" alt="画像"></li>
+								<li class="thumbnail-item"><img src="assets/images/product/product-img-15.jpg" alt="画像"></li>
+							  </ul>
+						</div>
+					</div>
+					<div class="grid-col--6">
+						<div class="box-txtimg__txt">
+							<h3 class="hdg-lv3"><span>name product</span></h3>
+							<div class="box-product__description">
+								<p>description product</p>
+							</div>
+							<div class="box-product_price">
+								<p class="box-product_price--old"><span></span><span>99.999</span><span>đ/Sản Phẩm</span></p>
+								<p class="box-product_price--new"><span></span><span>89.999</span><span>đ/Sản Phẩm</span></p>
+
+							</div>
+							<div class="box-bg box-bg--gray01">
+								<h4 class="hdg-lv4">ガスメーターの指示値について</h4>
+								<p class="txt-common">ガスメーターには、1m³未満の数字（最小0.001m³）も表示していますが、検針時には1m³未満の指示値は切り捨てて読み取ります。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+								
+			</div>
+
+
+        
+			<!-- https://codepen.io/jasperlachance/pen/yOJdRr -->
+	</div><!-- /#main -->
+</div><!-- /#container -->
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/l-footer.inc');?>
+</div><!-- /#document -->
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/c-common-html.inc');?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/c-common-js.inc');?>
+
+
+
+
+<script>
+	$(function(){
+		$('.style-guide-heading').each(function(){
+			$('#style-guide-nav').append('<li><a href="#'+ $(this).attr('id') +'">'+ $(this).text() +'</a>');
+		});
+		$('#style-guide-nav').on('click', function(){
+			$(this).toggleClass('hide');
+		});
+	});
+</script>
+</body>
+</html>

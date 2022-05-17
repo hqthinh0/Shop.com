@@ -1,0 +1,1 @@
+<p class="nav-backtotop"><a href="#l-document">このページの先頭へ戻る</a></p>
