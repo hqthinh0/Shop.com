@@ -482,4 +482,5 @@ function generateBalls() {
   window.addEventListener('resize', function(e) {
     $(".gooey-animations .ball").remove();
     generateBalls();
-  })
+  });
+

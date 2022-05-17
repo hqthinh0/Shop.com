@@ -1270,3 +1270,65 @@ footer {
         }
     }
 }
+#l-document{
+    overflow :unset;
+}
+#l-header{
+    position: sticky;
+    top: 0;
+}
+
+
+.start-ratting{
+        position: relative;
+        color: #E31F1F;
+        padding: 20px 30px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+
+    .fa-star:before {
+        content: "\f005";
+    }
+    & .post{
+        display: none;
+    
+    }
+    & .text{
+        font-size: 25px;
+        color: #666;
+        font-weight: 500;
+    
+    }
+    & .edit:hover{
+        text-decoration: underline;
+    }
+    & .star-widget input{
+        display: none;
+    
+    }
+    .star-widget label{
+        font-size: 40px;
+        color: #444;
+        padding: 10px;
+        float: right;
+        transition: all 0.2s ease;
+    }
+    .star-widget input:not(:checked) ~ label:hover,
+    .star-widget input:not(:checked) ~ label:hover ~ label{
+        color: #fd4;
+    
+    }
+    input:checked ~ label{
+        color: #fd4;
+    }
+    input#rate-5:checked ~ label{
+        color: #fe7;
+        text-shadow: 0 0 20px #952;
+    
+    }
+
+}

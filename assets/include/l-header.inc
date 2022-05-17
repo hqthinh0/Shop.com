@@ -55,7 +55,7 @@ if($current == 'home'){
 						</div>
 					</div>
 				</li>
-				<li class="nav-global-wrap_lv1 is-hover" <?php if ($current == '★★★') echo ' class="current"' ?>><a href="★★★" class="nav-item" data-text="About">About</a>
+				<li class="nav-global-wrap_lv1" <?php if ($current == '★★★') echo ' class="current"' ?>><a href="★★★" class="nav-item" data-text="About">About</a>
 					<div class="nav-parent-wrap">
 						<div class="nav-parent">
 							<p class="nav-parent__title"><a href="★★★">Link 2</a></p>

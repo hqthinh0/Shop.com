@@ -1156,4 +1156,59 @@ footer {
 .l-footer ul li a:hover {
   opacity: 0.7;
 }
+
+#l-document {
+  overflow: unset;
+}
+
+#l-header {
+  position: sticky;
+  top: 0;
+}
+
+.start-ratting {
+  position: relative;
+  color: #E31F1F;
+  padding: 20px 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.start-ratting .fa-star:before {
+  content: "";
+}
+.start-ratting .post {
+  display: none;
+}
+.start-ratting .text {
+  font-size: 25px;
+  color: #666;
+  font-weight: 500;
+}
+.start-ratting .edit:hover {
+  text-decoration: underline;
+}
+.start-ratting .star-widget input {
+  display: none;
+}
+.start-ratting .star-widget label {
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+.start-ratting .star-widget input:not(:checked) ~ label:hover,
+.start-ratting .star-widget input:not(:checked) ~ label:hover ~ label {
+  color: #fd4;
+}
+.start-ratting input:checked ~ label {
+  color: #fd4;
+}
+.start-ratting input#rate-5:checked ~ label {
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
 /*# sourceMappingURL=style_static.css.map */
