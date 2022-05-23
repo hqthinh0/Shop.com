@@ -484,12 +484,6 @@ $(function(){
 		document.querySelector(".products-area-wrapper").classList.remove("gridView");
 		document.querySelector(".products-area-wrapper").classList.add("tableView");
 		});
-		
-		var modeSwitch = document.querySelector('.mode-switch');
-		modeSwitch.addEventListener('click', function () {
-		document.documentElement.classList.toggle('light');
-		modeSwitch.classList.toggle('active');
-		});
 
 });
 
@@ -498,9 +492,7 @@ $(function(){
 
 function generateBalls() {
     for (var i = 0; i < Math.floor(window.innerWidth/20); i++) {
-      $(".gooey-animations").append(`
-      <div class="ball"></div>
-    `);
+      $(".gooey-animations").append(`<div class="ball"></div>`);
       var colors = ['#00ade1','#FFA036', '#dc00d4', '#00dc82'];
       $(".ball").eq(i).css({"bottom":"-50px","left":Math.random()*window.innerWidth-100,"animation-delay":Math.random()*5+"s","transform":"translateY("+Math.random()*10+"px)","background-color":colors[i%4]});
     }
@@ -513,5 +505,33 @@ function generateBalls() {
   });
 
 
+//click sort{}
+$(function(){
+   
+    // console.log ("a " + tableView_price);	
+});
 
+
+
+function sortPriceIncrease(n) {
+   let click_sort,dir,switchcount,switching;
+   dir = "asc";
+   switching = true;
+   click_sort = document.querySelectorAll(".tableView .products-header > .price button");
+   product = document.querySelectorAll(".products-row .product-cell");
+   switchcount = 0;
+
+   while (switching) {
+    switching = false;
+    for (i = 1; i < product.length - 1; i++){
+        shouldSwitch = false;
+
+        x = product[i].getElementsByClassName('.price');
+        y = product[i + 1].getElementsByClassName(".price");
+        
+        // console.log(x);
+        // console.log(y);
+    }
+   }
+}
 
