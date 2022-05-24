@@ -24,6 +24,8 @@
   --active: #fff;
   --border: rgba(255, 255, 255, .12);
   --action-color: #1f1c2e;
+  --primaryClr: #fed75a;
+  --pacman-zise: 70px;
 }
 
 .light:root {
@@ -1271,6 +1273,7 @@
   width: 100%;
   filter: drop-shadow(0 0 25px var(--color));
   left: 0px;
+  top: 13px;
 }
 @media screen and (min-width: 769px) {
   .nav-global-wrap_lv1 a::after {
@@ -1909,5 +1912,205 @@
 }
 .gridView .cell-label {
   opacity: 0.6;
+}
+
+#loadding {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background: #111111;
+  z-index: 200;
+  /* KEYFRAMES */
+  /* SOLAR SYSTEM */
+}
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@keyframes configure-clockwise {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#loadding .solar-system {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loadding .orbit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fafbfC;
+  border-radius: 50%;
+}
+#loadding .mercury-orbit {
+  width: 70px;
+  height: 70px;
+  -webkit-animation: spin 3s linear 0s infinite;
+}
+#loadding .venus-orbit {
+  width: 90px;
+  height: 90px;
+  -webkit-animation: spin 6s linear 0s infinite;
+}
+#loadding .earth-orbit {
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 10s linear 0s infinite;
+}
+#loadding .mars-orbit {
+  width: 150px;
+  height: 150px;
+  -webkit-animation: spin 12s linear 0s infinite;
+}
+#loadding .jupiter-orbit {
+  width: 180px;
+  height: 180px;
+  -webkit-animation: spin 15s linear 0s infinite;
+}
+#loadding .saturn-orbit {
+  width: 210px;
+  height: 210px;
+  -webkit-animation: spin 18s linear 0s infinite;
+}
+#loadding .uranus-orbit {
+  width: 240px;
+  height: 240px;
+  -webkit-animation: spin 21s linear 0s infinite;
+}
+#loadding .neptune-orbit {
+  width: 270px;
+  height: 270px;
+  -webkit-animation: spin 23s linear 0s infinite;
+}
+#loadding .planet {
+  position: absolute;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3ff9dc;
+}
+#loadding .planet.mercury {
+  background-color: #fb5b53;
+}
+#loadding .planet.venus {
+  background-color: #5e5e5c;
+}
+#loadding .planet.mars {
+  background-color: #dec784;
+}
+#loadding .planet.jupiter {
+  background-color: #c5c4c0;
+}
+#loadding .planet.saturn {
+  background-color: #faee9a;
+}
+#loadding .planet.uranus {
+  background-color: #8ca4b0;
+}
+#loadding .planet.neptune {
+  background-color: #4a5779;
+}
+#loadding .sun {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: red;
+}
+#loadding .leo {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+#loadding .blue-orbit {
+  width: 165px;
+  height: 165px;
+  border: 1px solid #91daffa5;
+  -webkit-animation: spin3D 3s linear 0.2s infinite;
+}
+#loadding .green-orbit {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #91ffbfa5;
+  -webkit-animation: spin3D 2s linear 0s infinite;
+}
+#loadding .red-orbit {
+  width: 90px;
+  height: 90px;
+  border: 1px solid #ffca91a5;
+  -webkit-animation: spin3D 1s linear 0s infinite;
+}
+#loadding .white-orbit {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ffffff;
+  -webkit-animation: spin3D 10s linear 0s infinite;
+}
+#loadding .w1 {
+  transform: rotate3D(1, 1, 1, 90deg);
+}
+#loadding .w2 {
+  transform: rotate3D(1, 2, 0.5, 90deg);
+}
+#loadding .w3 {
+  transform: rotate3D(0.5, 1, 2, 90deg);
+}
+#loadding .three-quarter-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fb5b53;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.5s linear 0s infinite;
+}
+#loadding .loading-line {
+  text-align: center;
+  width: 400px;
+  height: fit-content;
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+}
+#loadding .line {
+  margin-top: 8px;
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  animation: loading 2s linear;
+  animation-iteration-count: infinite;
+}
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style_static.css.map */
