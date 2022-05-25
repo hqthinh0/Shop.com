@@ -507,8 +507,34 @@ function generateBalls() {
 
 //click sort{}
 $(function(){
-   
-    // console.log ("a " + tableView_price);	
+    
+
+    var tabLinks = document.querySelectorAll(".catogery-list li");
+var tabContent =document.querySelectorAll(".products div");
+
+
+tabLinks.forEach(function(el) {
+    el.addEventListener("click", openTabs);
+ });
+ 
+ function openTabs(el) {
+    var btn = el.currentTarget; // lắng nghe sự kiện và hiển thị các element
+    var electronic = btn.dataset.value; // lấy giá trị trong data-electronic
+  
+    tabContent.forEach(function(el) {
+       el.classList.remove("active");
+    });
+ 
+    tabLinks.forEach(function(el) {
+       el.classList.remove("active");
+    });
+
+    console.log(electronic);
+        document.querySelector("#" + electronic).classList.add("active");
+        btn.classList.add("active");
+    }
+
+    
 });
 
 
@@ -536,11 +562,3 @@ function sortPriceIncrease(n) {
 }
 
 
-function hideLoader() {
-    $('#loadding').hide();
-}
-
-$(window).ready(hideLoader);
-
-// Strongly recommended: Hide loader after 20 seconds, even if the page hasn't finished loading
-setTimeout(hideLoader, 20 * 1000);

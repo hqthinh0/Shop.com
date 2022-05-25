@@ -48,6 +48,10 @@
 	--filter-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 
+// * + .l-footer{
+// 	margin-top: 30px !important;
+// }
+
 .wrp-grid{
 	@media screen and (min-width:769px) {
 		margin-left: -12px;
@@ -845,13 +849,9 @@
 				height: 44px;
 				position: absolute;
 				cursor: pointer;
-				top: calc(59% - 44px);
-				@media screen and (min-width:769px) {
-					top: calc(50% - 44px);
-				}
-			@media screen and (max-width:375px) {
-				top: calc(66% - 44px);
-			}
+				top: calc(50% - 44px);
+
+	
 			&.prev-arrow {
 					left: 3%;
 					transform: scaleX(-1);
@@ -1380,7 +1380,7 @@
 	overflow: hidden;
 	position: absolute;
 	width: 100vw;
-	height: 207px;
+	height: 169px;
 	bottom: 0;
 }
 
@@ -2271,4 +2271,107 @@
 		}
 	}
 
+}
+
+
+// collections
+.catogery-collections{
+	display: flex;
+	.catogery-list {
+		display: block;
+		float: left;
+		list-style:none;
+		width: 20%;
+		border-radius: 5px;
+		margin: 15px;
+	
+		& li {
+			display: block;
+			color: #000;
+			padding: 20px 10px;
+			font: 18px sans-serif;
+			text-transform: capitalize;
+			cursor: pointer;
+	
+			&:hover {
+				color: #23192D;
+			
+			  }
+			&.active {
+				color: #23192D;
+				position: relative;
+				&::after{
+					width: 60%;
+					}
+				}
+				&::after{
+					content: "";
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					width: 0;
+					border-bottom: 0.3rem solid #2065c0;
+					transition: all 0.7s ease;
+					transform: translateX(-50%);
+					-webkit-transition: all 0.3s ease;
+					-webkit-transform: translateX(-50%);
+				}
+			}
+		}
+		.products {
+			width: 100%;
+			height: auto;
+			margin: 15px 10px;
+			padding: 10px;
+
+			& > div {
+				margin: 5px;
+				line-height: 100px;
+				cursor: pointer;
+				display: none;
+				&.active{
+					display: block;
+					
+
+					& .box-card{
+						&__item{
+							animation: fadeInRight 2s ease-out;
+							}
+						}
+				    }
+		    	}
+
+	    	}
+		
+		@keyframes moveInleft {
+			0% {
+				opacity: 0;
+				transform: translateX(-100px);
+			}
+		
+			80% {
+				transform: translateX(10px);
+			}
+			100% {
+				opacity: 1;
+				transform: translate(0);
+			}
+		}
+		
+		@keyframes moveInRight {
+			0% {
+				opacity: 0;
+				transform: translateX(50px);
+			}
+		
+			// 80% {
+			// 	transform: translateX(-5px);
+			// }
+			
+			100% {
+				opacity: 1;
+				transform: translate(0);
+			}
+		
+		}
 }

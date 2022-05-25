@@ -849,17 +849,7 @@
   height: 44px;
   position: absolute;
   cursor: pointer;
-  top: calc(59% - 44px);
-}
-@media screen and (min-width: 769px) {
-  .banner__slider .slick-nav {
-    top: calc(50% - 44px);
-  }
-}
-@media screen and (max-width: 375px) {
-  .banner__slider .slick-nav {
-    top: calc(66% - 44px);
-  }
+  top: calc(50% - 44px);
 }
 .banner__slider .slick-nav.prev-arrow {
   left: 3%;
@@ -1293,7 +1283,7 @@
   overflow: hidden;
   position: absolute;
   width: 100vw;
-  height: 207px;
+  height: 169px;
   bottom: 0;
 }
 
@@ -2111,6 +2101,89 @@
   }
   100% {
     width: 100%;
+  }
+}
+
+.catogery-collections {
+  display: flex;
+}
+.catogery-collections .catogery-list {
+  display: block;
+  float: left;
+  list-style: none;
+  width: 20%;
+  border-radius: 5px;
+  margin: 15px;
+}
+.catogery-collections .catogery-list li {
+  display: block;
+  color: #000;
+  padding: 20px 10px;
+  font: 18px sans-serif;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.catogery-collections .catogery-list li:hover {
+  color: #23192D;
+}
+.catogery-collections .catogery-list li.active {
+  color: #23192D;
+  position: relative;
+}
+.catogery-collections .catogery-list li.active::after {
+  width: 60%;
+}
+.catogery-collections .catogery-list li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  border-bottom: 0.3rem solid #2065c0;
+  transition: all 0.7s ease;
+  transform: translateX(-50%);
+  -webkit-transition: all 0.3s ease;
+  -webkit-transform: translateX(-50%);
+}
+.catogery-collections .products {
+  width: 100%;
+  height: auto;
+  margin: 15px 10px;
+  padding: 10px;
+}
+.catogery-collections .products > div {
+  margin: 5px;
+  line-height: 100px;
+  cursor: pointer;
+  display: none;
+}
+.catogery-collections .products > div.active {
+  display: block;
+}
+.catogery-collections .products > div.active .box-card__item {
+  animation: fadeInRight 2s ease-out;
+}
+@keyframes moveInleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }
 /*# sourceMappingURL=style_static.css.map */

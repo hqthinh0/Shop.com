@@ -15,15 +15,137 @@
 <meta property="og:site_name" content="★★★">
 <link rel="manifest" href="/site.webmanifest">
 <link href="/assets/images/apple-touch-icon.png" rel="apple-touch-icon">
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/c-common-css.inc');?>
 <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
 <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/c-analytics01.inc');?>
+<link href="/assets/css/vendors.min.css" rel="stylesheet" media="all">
+<link href="/assets/css/styles.css" rel="stylesheet" media="all">
+<link href="/assets/css/style_static.css" rel="stylesheet" media="all">
+
 </head>
 <body>
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/c-analytics02.inc');?>
+
 <div id="l-document">
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/l-header.inc');?>
+	<header id="l-header" class="l-header <?php if (isset($is_simple)) echo 'is-header-simple' ?>">
+		<div class="l-header__wrapper">
+	<h1 id="sitelogo"><a href="/"><img src="/assets/images/logo-site.svg" alt="★★★"></a></h1>
+			<a class="nav-global-menu">
+				<span class="b1" aria-hidden="true"></span>
+				<span class="b2" aria-hidden="true"></span>
+				<span class="b3" aria-hidden="true"></span>
+			</a>
+			<nav class="nav-global-wrap">
+				<ul class="nav-global">
+					<li class="nav-global-wrap_lv1"><a href="★★★" class="nav-item"  data-text="Home">Home</a>
+						<div class="nav-parent-wrap">
+							<div class="nav-parent">
+								<p class="nav-parent__title"><a href="★★★">Link 1</a></p>
+								<ul class="nav-global__sub">
+									<li><a href="★★★" class="nav-global__sub__title">Item 1</a>
+										<ul class="nav-global__sub__child">
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+										</ul>
+									</li>
+									<li><a href="★★★" class="nav-global__sub__title">Item 2</a>
+										<ul class="nav-global__sub__child">
+											<li><a href="★★★">5</a></li>
+											<li><a href="★★★">5</a></li>
+											<li><a href="★★★">5</a></li>
+											<li><a href="★★★">5</a></li>
+										</ul>
+									</li>
+									<li><a href="★★★" class="nav-global__sub__title">Item 3</a>
+										<ul class="nav-global__sub__child">
+											<li><a href="★★★">1</a></li>
+											<li><a href="★★★">2</a></li>
+											<li><a href="★★★">3</a></li>
+											<li><a href="★★★">4</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav-global-wrap_lv1"><a href="★★★" class="nav-item" data-text="About">About</a>
+						<div class="nav-parent-wrap">
+							<div class="nav-parent">
+								<p class="nav-parent__title"><a href="★★★">Link 2</a></p>
+								<ul class="nav-global__sub">
+									<li><a href="★★★" class="nav-global__sub__title">Item 1</a>
+										<ul class="nav-global__sub__child">
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+										</ul>
+									</li>
+									<li><a href="★★★" class="nav-global__sub__title">Item 2</a>
+										<ul class="nav-global__sub__child">
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+										</ul>
+									</li>
+									<li><a href="★★★" class="nav-global__sub__title">Item 3</a>
+										<ul class="nav-global__sub__child">
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+										</ul>
+									</li>
+									<li><a href="★★★">Item 4</a></li>
+									<li><a href="★★★">Item 5</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li  class="nav-global-wrap_lv1" ><a href="★★★" data-text="Services">Services</a></li>
+					<li class="nav-global-wrap_lv1" ><a href="★★★" data-text="Team">Team</a></li>
+					<li  class="nav-global-wrap_lv1" ><a href="★★★" class="nav-item" data-text="Contact">Contact</a>
+						<div class="nav-parent-wrap">
+							<div class="nav-parent">
+								<p class="nav-parent__title"><a href="★★★">Link 5</a></p>
+								<ul class="nav-global__sub">
+									<li><a href="★★★" class="nav-global__sub__title">Item 1</a>
+										<ul class="nav-global__sub__child">
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+										</ul>
+									</li>
+									<li><a href="★★★" class="nav-global__sub__title">Item 2</a>
+										<ul class="nav-global__sub__child">
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+										</ul>
+									</li>
+									<li><a href="★★★" class="nav-global__sub__title">Item 3</a>
+										<ul class="nav-global__sub__child">
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+											<li><a href="★★★">ダミーテキスト</a></li>
+										</ul>
+									</li>
+									<li><a href="★★★">Item 4</a></li>
+									<li><a href="★★★">Item 5</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	
+	</header>
+	
 <div id="l-container">
 	<noscript>
 		<div class="box-noscript">
@@ -74,7 +196,11 @@
 		</section>
 		<section>
 			<div class="wrp-container">
-				<h2 class="hdg-lv2 hdg-lv2--center"><span>Thời trang mùa đông</span></h2>
+				<h2 class="hdg-lv2 hdg-lv2--center"><span></span></h2>
+				<h2 class="hdg-lv2 hdg-lv2--underbar">
+					<span>Thời trang mùa đông</span>
+					<a href="★★★" class="link-common" target="_blank">Nhấn vào đây để xem bộ sưu tập</a>
+				</h2>
 				<div class="box-card box-card--noframe grid-row">
 					<div class="grid-col--4 box-card__item ">
 						<a href="★★★" class="js-matchheight" target="_blank">
@@ -83,7 +209,7 @@
 							</div>
 							<div class="box-card__txt">
 								<h4 class="hdg-lv4">Áo Khoác</h4>
-								<p>テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。</p>
+								<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 							</div>
 						</a>
 					</div>
@@ -94,7 +220,7 @@
 							</div>
 							<div class="box-card__txt">
 								<h4 class="hdg-lv4">Giày</h4>
-								<p>テキストです。テキストです。テキストです。</p>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
 							</div>
 						</a>
 					</div>
@@ -105,7 +231,7 @@
 							</div>
 							<div class="box-card__txt">
 								<h4 class="hdg-lv4">Áo Lens</h4>
-								<p>テキストです。テキストです。テキストです。</p>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 							</div>
 						</a>
 					</div>
@@ -115,7 +241,11 @@
 		</section>
 		<section>
 			<div class="wrp-container">
-				<h2 class="hdg-lv2 hdg-lv2--center"><span>Thời trang mùa hè</span></h2>
+				<h2 class="hdg-lv2 hdg-lv2--center"><span></span></h2>
+				<h2 class="hdg-lv2 hdg-lv2--underbar">
+					<span>Thời trang mùa hè</span>
+					<a href="★★★" class="link-common" target="_blank">Nhấn vào đây để xem bộ sưu tập</a>
+				</h2>
 				<div class="box-card box-card--noframe grid-row">
 					<div class="grid-col--4 box-card__item ">
 						<a href="★★★" class="js-matchheight" target="_blank">
@@ -124,7 +254,7 @@
 							</div>
 							<div class="box-card__txt">
 								<h4 class="hdg-lv4">Áo Thun</h4>
-								<p>テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。</p>
+								<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 							</div>
 						</a>
 					</div>
@@ -135,7 +265,7 @@
 							</div>
 							<div class="box-card__txt">
 								<h4 class="hdg-lv4">Áo Giày</h4>
-								<p>テキストです。テキストです。テキストです。</p>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
 							</div>
 						</a>
 					</div>
@@ -146,7 +276,7 @@
 							</div>
 							<div class="box-card__txt">
 								<h4 class="hdg-lv4">Quần</h4>
-								<p>テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。テキストです。</p>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 							</div>
 						</a>
 					</div>
@@ -288,10 +418,39 @@
 		</section>
 	</div><!-- /#main -->
 </div><!-- /#container -->
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/l-footer.inc');?>
+<footer id="l-footer" class="l-footer">
+	<div class="l-footer__wrapper">
+		 <div class="gooey-animations"></div>
+			
+		<ul>
+			<li>
+				<a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><img src="/assets/images/icon-facebook.svg" class="fluid-image" alt=""></a>
+			</li>
+			<li>
+				<a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><img src="/assets/images/icon-youtube.svg" class="fluid-image" alt=""></a>
+			</li>
+			<li>
+				<a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><img src="/assets/images/icon-instagram.svg" class="fluid-image" alt=""></a>
+			</li>
+			<li>
+				<a class="social-button tiktok" href="https://www.tiktok.com/" target="_blank"><img src="/assets/images/icon-tiktok.svg" class="fluid-image" alt=""></a>
+			</li>
+		</ul>
+			
+		<p class="txt-copyright"><small>&copy; ★★★, Ltd. All Rights Reserved.</small></p>
+	</div>
+</footer>
+
+
 </div><!-- /#document -->
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/c-common-html.inc');?>
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/c-common-js.inc');?>
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/c-analytics03.inc');?>
+<!-- <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/c-common-html.inc');?> -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendors/jquery.min.js"><\/script>');</script>
+<script src="/assets/js/vendors.min.js"></script>
+<script src="/assets/js/utils.js"></script>
+<script src="/assets/js/slick.js" type="text/javascript" charset="utf-8"></script>
+<script src="/assets/js/scripts.js"></script>
+
+
 </body>
 </html>
