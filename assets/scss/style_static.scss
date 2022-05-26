@@ -125,11 +125,15 @@
 
 .hdg-lv2{
 	position: relative;
-	margin-top: 64px;
+	@media screen and (min-width:769px) {
+		margin-top: 50px;
+		font-size: 24px;
+	}
+	margin-top: 25px;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	font-size: 24px;
+	font-size: 18px;
 	border-bottom: none;
 	line-height: 1.5;
 
@@ -441,13 +445,16 @@
 //sec contact start
 
 .sec_contact{
+
 	background: rgb(95, 118, 206);
 	background: linear-gradient(65deg, rgba(95,118,206,1) 0%, rgba(88,145,207,1) 32%, rgba(88,145,207,1) 70%, rgba(98,150,206,1) 100%);
 	position: relative;
 
 	@media screen and (min-width:769px) {
+		margin-top: 50px;
 		padding: 80px 0 70px;
 	}
+	margin-top: 25px;
 	padding: 35px 0 0;
 	& .wrp_container{
 		margin: 0 4%;
@@ -613,12 +620,9 @@
 .banner__slider{
 	.slider, .slide {
 			@media  screen and (min-width: 769px) {
-				height: 60vh;
+				height: 58vh;
 			}
-			height: 30vh;
-			@media  screen and (max-width: 375px) {
-				height: 20vh;
-			}
+			height: 28vh;
 		}
 		.slide {
 			position: relative;
@@ -855,7 +859,7 @@
 			&.prev-arrow {
 					left: 3%;
 					transform: scaleX(-1);
-					z-index: 999;
+					z-index: 99;
 			}
 			&.next-arrow{
 				left: auto;
@@ -1279,6 +1283,7 @@
 
 .nav-global-wrap{
 	&_lv1{
+
 		&:first-child{
 			--color: #00ade1;
 			.nav-parent{
@@ -1348,21 +1353,24 @@
 				color: var(--color);
 				overflow: hidden;
 				transition: 1s;
-				border-right: 4px solid var(--color);
+				@media screen and (min-width:769px) {
+					border-right: 4px solid var(--color);
+				}
+				border: none;
 				-webkit-text-stroke: 1px var(--color);
 			}
 			&:hover{
+				color: var(--color);
 				&::before {
 					width: 100%;
+				
 					filter: drop-shadow(0 0 25px var(--color));
 					left: 0px;
-                    top: 13px;
+					@media screen and (min-width:769px) {
+						top: 13px;
 					}
-			}
-			&::after{
-				@media screen and (min-width:769px) {
-					border-bottom: 0.3rem solid var(--color) !important;
-				}
+					top : 0;
+					}
 			}
 		}
 	}
@@ -1543,7 +1551,6 @@
 		max-width: 1280px;
 		display: flex;
 		overflow: hidden;
-		max-width: 2000px;
 		margin: 0 auto;
 	}
 
@@ -1635,7 +1642,6 @@
 	}
 
 	.app-content {
-	padding: 16px;
 	height: 100%;
 	flex: 1;
 	max-height: 100%;
@@ -1906,10 +1912,11 @@
 		&.stock, &.price { flex: 0.2; }
 	  }}
 	  
-	  @media screen and (max-width: 480px) {&{
-		&.stock { display: none; }
-		&.price { flex: 0.4; }
-	  }}
+	  @media screen and (max-width: 480px) {
+		&{
+			&.price { flex: 0.4; }
+		}
+		}
 	}
 	
 	.sort-button {
@@ -2284,6 +2291,10 @@
 		width: 20%;
 		border-radius: 5px;
 		margin: 15px;
+		align-self: flex-start;
+		position: sticky;
+		position: -webkit-sticky;
+		top: 107px;
 	
 		& li {
 			display: block;
@@ -2363,10 +2374,7 @@
 				opacity: 0;
 				transform: translateX(50px);
 			}
-		
-			// 80% {
-			// 	transform: translateX(-5px);
-			// }
+	
 			
 			100% {
 				opacity: 1;
@@ -2374,4 +2382,11 @@
 			}
 		
 		}
+}
+
+.products-wrapper + .sec_contact{
+	@media screen and (min-width:769px) {
+		margin-top: 30px;
+	}
+	margin-top: 15px;
 }

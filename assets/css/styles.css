@@ -584,6 +584,9 @@ textarea{
 	margin: 0 4vw;
 	max-width: 130rem;
 }
+.container{
+	margin: 0 4vw;
+}
 .wrp-container:after{
 	content: "";
 	display: block;
