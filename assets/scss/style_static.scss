@@ -1756,6 +1756,9 @@
 }
   
 .filter-menu {
+	@media screen and (max-width:768px) {
+		display: none;
+	}
 	background-color: var(--app-content-secondary-color);
 	position: absolute;
 	top: calc(100% + 16px);
@@ -1821,10 +1824,10 @@
 		}
 
 		&:focus, &.active {
-		outline: none;
-		color: var(--action-color);
-		border-color: var(--action-color);
-		@include arrowDown('2869ff');
+			outline: none;
+			color: var(--action-color);
+			border-color: var(--action-color);
+			@include arrowDown('2869ff');
 		}
 	}
 }
@@ -1860,12 +1863,12 @@
 	
   .tableView {
 	.products-header {
-	  display: flex;
-	  align-items: center;
-	  border-radius: 4px;
-	  background-color: var(--app-content-secondary-color);
-	  position: sticky;
-	  top: 0;
+		display: flex;
+		align-items: center;
+		border-radius: 4px;
+		background-color: var(--app-content-secondary-color);
+		position: sticky;
+		top: 0;
 	}
 	
 	.products-row {
@@ -2389,4 +2392,34 @@
 		margin-top: 30px;
 	}
 	margin-top: 15px;
+}
+
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 32px auto 52px;
+    padding: 0 20px;
+    max-width: 1287px;
+    list-style: none;
+    background: none;
+
+    & a {
+        color: #000000;
+    }
+
+    &-item + &-item{
+        padding-left: 0.5rem;
+        position: relative;
+        &::before{
+            background: url(../images/next.svg) center center/contain no-repeat;
+            font-weight: 900;
+            content: "";
+            width: 6px;
+            display: inline-block;
+            height: 10px;
+            color: #cccccc;
+            padding-right: 1.5rem;
+        }
+    }
 }

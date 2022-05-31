@@ -505,60 +505,80 @@ function generateBalls() {
   });
 
 
-//click sort{}
-$(function(){
-    
+//tab collection
+  $(function(){
 
-    var tabLinks = document.querySelectorAll(".catogery-list li");
-var tabContent =document.querySelectorAll(".products div");
+	var tabLinks = document.querySelectorAll(".catogery-list li");
+	var tabContent =document.querySelectorAll(".products div");
 
 
 tabLinks.forEach(function(el) {
-    el.addEventListener("click", openTabs);
+	el.addEventListener("click", openTabs);
  });
  
  function openTabs(el) {
-    var btn = el.currentTarget; // lắng nghe sự kiện và hiển thị các element
-    var electronic = btn.dataset.value; // lấy giá trị trong data-electronic
-  
-    tabContent.forEach(function(el) {
-       el.classList.remove("active");
-    });
- 
-    tabLinks.forEach(function(el) {
-       el.classList.remove("active");
-    });
+	var btn = el.currentTarget; // lắng nghe sự kiện và hiển thị các element
+	var electronic = btn.dataset.value; // lấy giá trị trong data-electronic
 
-    console.log(electronic);
-        document.querySelector("#" + electronic).classList.add("active");
-        btn.classList.add("active");
-    }
+	tabContent.forEach(function(el) {
+		el.classList.remove("active");
+	});
 
-    
+	tabLinks.forEach(function(el) {
+		el.classList.remove("active");
+	});
+
+	console.log(electronic);
+		document.querySelector("#" + electronic).classList.add("active");
+		btn.classList.add("active");
+	}
 });
 
 
+const fillter_product = () =>{
+   let search_bar = document.querySelector('.search-bar').value.toUpperCase();
+   let products_row =  document.querySelectorAll('.products-row');
+   let name =  document.querySelectorAll('.products-row a span');
+   
+   for(var i = 0; i< products_row.length; i++){
 
-function sortPriceIncrease(n) {
-   let click_sort,dir,switchcount,switching;
-   dir = "asc";
-   switching = true;
-   click_sort = document.querySelectorAll(".tableView .products-header > .price button");
-   product = document.querySelectorAll(".products-row .product-cell");
-   switchcount = 0;
-
-   while (switching) {
-    switching = false;
-    for (i = 1; i < product.length - 1; i++){
-        shouldSwitch = false;
-
-        x = product[i].getElementsByClassName('.price');
-        y = product[i + 1].getElementsByClassName(".price");
-        
-        // console.log(x);
-        // console.log(y);
-    }
+    let list2 = name[i];
+        if(list2){
+            let textvalue = list2.textContent || list2.innerHTML;
+           
+            if(textvalue.toUpperCase().indexOf(search_bar) > -1){
+                 console.log(i);
+                products_row[i].style.display = "";
+            }else{
+                products_row[i].style.display = "none";
+            }
+        }
    }
 }
 
+//infinite scroll
 
+$(function() {
+	var counter = 0;
+	
+	$(window).on('scroll', function(){
+	  var win_height = $(this).height();
+	  console.log('win_height' + win_height);
+	  var win_scroll = $(this).scrollTop();
+	  var scroll_trigger = win_height + win_scroll; 
+	  console.log('scroll_trigger' + scroll_trigger);
+	  
+	  var elm_height = $('.products-area-wrapper').height();
+	  var elm_pos_y  = $('.products-area-wrapper').offset().top;
+
+	
+	  var elm_bottom = elm_height + elm_pos_y;
+	  console.log('elm_bottom' + elm_bottom);
+	  if (scroll_trigger >= elm_bottom){
+		var $last_item = $('.products-row').first().clone();
+		counter++;
+		$last_item.prepend(counter);
+		$('.products-area-wrapper').append($last_item);
+	  }
+	});
+  });

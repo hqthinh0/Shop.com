@@ -449,8 +449,8 @@
 }
 
 .sec_contact {
-  background: #5f76ce;
-  background: linear-gradient(65deg, #5f76ce 0%, #5891cf 32%, #5891cf 70%, #6296ce 100%);
+  background: rgb(95, 118, 206);
+  background: linear-gradient(65deg, rgb(95, 118, 206) 0%, rgb(88, 145, 207) 32%, rgb(88, 145, 207) 70%, rgb(98, 150, 206) 100%);
   position: relative;
   margin-top: 25px;
   padding: 35px 0 0;
@@ -1065,7 +1065,7 @@
 }
 @media screen and (min-width: 769px) {
   .tabs-product__items-wrapper {
-    width: calc(100% - 20%);
+    width: 80%;
   }
 }
 
@@ -1643,6 +1643,11 @@
   opacity: 0;
   transition: 0.2s;
 }
+@media screen and (max-width: 768px) {
+  .filter-menu {
+    display: none;
+  }
+}
 .filter-menu:before {
   content: "";
   position: absolute;
@@ -2047,19 +2052,19 @@
 #loadding .blue-orbit {
   width: 165px;
   height: 165px;
-  border: 1px solid #91daffa5;
+  border: 1px solid rgba(145, 218, 255, 0.6470588235);
   -webkit-animation: spin3D 3s linear 0.2s infinite;
 }
 #loadding .green-orbit {
   width: 120px;
   height: 120px;
-  border: 1px solid #91ffbfa5;
+  border: 1px solid rgba(145, 255, 191, 0.6470588235);
   -webkit-animation: spin3D 2s linear 0s infinite;
 }
 #loadding .red-orbit {
   width: 90px;
   height: 90px;
-  border: 1px solid #ffca91a5;
+  border: 1px solid rgba(255, 202, 145, 0.6470588235);
   -webkit-animation: spin3D 1s linear 0s infinite;
 }
 #loadding .white-orbit {
@@ -2204,5 +2209,32 @@
   .products-wrapper + .sec_contact {
     margin-top: 30px;
   }
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 32px auto 52px;
+  padding: 0 20px;
+  max-width: 1287px;
+  list-style: none;
+  background: none;
+}
+.breadcrumb a {
+  color: #000000;
+}
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.5rem;
+  position: relative;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  background: url(../images/next.svg) center center/contain no-repeat;
+  font-weight: 900;
+  content: "";
+  width: 6px;
+  display: inline-block;
+  height: 10px;
+  color: #cccccc;
+  padding-right: 1.5rem;
 }
 /*# sourceMappingURL=style_static.css.map */
