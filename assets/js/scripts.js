@@ -558,27 +558,27 @@ const fillter_product = () =>{
 
 //infinite scroll
 
-$(function() {
-	var counter = 0;
+// $(function() {
+// 	var counter = 0;
 	
-	$(window).on('scroll', function(){
-	  var win_height = $(this).height();
-	  console.log('win_height' + win_height);
-	  var win_scroll = $(this).scrollTop();
-	  var scroll_trigger = win_height + win_scroll; 
-	  console.log('scroll_trigger' + scroll_trigger);
+// 	$(window).on('scroll', function(){
+// 	  var win_height = $(this).height();
+// 	  console.log('win_height' + win_height);
+// 	  var win_scroll = $(this).scrollTop();
+// 	  var scroll_trigger = win_height + win_scroll; 
+// 	  console.log('scroll_trigger' + scroll_trigger);
 	  
-	  var elm_height = $('.products-area-wrapper').height();
-	  var elm_pos_y  = $('.products-area-wrapper').offset().top;
+// 	  var elm_height = $('.products-area-wrapper').height();
+// 	  var elm_pos_y  = $('.products-area-wrapper').offset().top;
 
 	
-	  var elm_bottom = elm_height + elm_pos_y;
-	  console.log('elm_bottom' + elm_bottom);
-	  if (scroll_trigger >= elm_bottom){
-		var $last_item = $('.products-row').first().clone();
-		counter++;
-		$last_item.prepend(counter);
-		$('.products-area-wrapper').append($last_item);
-	  }
-	});
-  });
+// 	  var elm_bottom = elm_height + elm_pos_y;
+// 	  console.log('elm_bottom' + elm_bottom);
+// 	  if (scroll_trigger >= elm_bottom){
+// 		var $last_item = $('.products-row').first().clone();
+// 		counter++;
+// 		$last_item.prepend(counter);
+// 		$('.products-area-wrapper').append($last_item);
+// 	  }
+// 	});
+//   });
