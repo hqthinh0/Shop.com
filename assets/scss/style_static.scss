@@ -1898,7 +1898,7 @@
 		&.image { flex: 0.2; }
 	  }}
 		
-	  @media screen and (max-width: 520px) {&{      
+	  @media screen and (max-width: 520px) {&{
 		&.category, &.sales {
 		  display: none;
 		}
@@ -2277,21 +2277,34 @@
 
 // collections
 .catogery-collections{
-	display: flex;
+    @media screen and (min-width:769px) {
+        display: flex;
+    }
+	
 	.catogery-list {
 		display: block;
-		float: left;
+		margin-top: 15px;
 		list-style:none;
 		width: 20%;
 		border-radius: 5px;
-		margin: 15px;
+		padding:0 15px;
 		align-self: flex-start;
 		position: sticky;
 		position: -webkit-sticky;
 		top: 107px;
+		@media screen and (max-width:769px) {
+			width: auto;
+			z-index: 7;
+		    top: 81px;
+			margin-top: 0;
+			background: #faee9a;
+		}
 	
 		& li {
 			display: block;
+			@media screen and (max-width:769px) {
+				display: inline-block;
+			}
 			color: #000;
 			padding: 20px 10px;
 			font: 18px sans-serif;
@@ -2323,59 +2336,28 @@
 				}
 			}
 		}
-		.products {
-			width: 100%;
-			height: auto;
-			margin: 15px 10px;
-			padding: 10px;
+	.products {
+		width: 100%;
+		height: auto;
+		margin-top: 15px;
+		padding: 10px;
+		box-sizing: border-box;
 
-			& > div {
-				margin: 5px;
-				line-height: 100px;
-				cursor: pointer;
-				display: none;
-				&.active{
-					display: block;
-					
-
-					& .box-card{
-						&__item{
-							animation: fadeInRight 2s ease-out;
-							}
-						}
-				    }
-		    	}
-
-	    	}
-		
-		@keyframes moveInleft {
-			0% {
-				opacity: 0;
-				transform: translateX(-100px);
-			}
-		
-			80% {
-				transform: translateX(10px);
-			}
-			100% {
-				opacity: 1;
-				transform: translate(0);
-			}
-		}
-		
-		@keyframes moveInRight {
-			0% {
-				opacity: 0;
-				transform: translateX(50px);
-			}
-	
+		& > div {
+			margin: 5px;
+			line-height: 100px;
+			cursor: pointer;
+			display: none;
 			
-			100% {
-				opacity: 1;
-				transform: translate(0);
+			&.active{
+					display: block;
+			
+				}
 			}
-		
+
 		}
+		
+
 }
 
 .products-wrapper + .sec_contact{
