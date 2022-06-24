@@ -1,4 +1,11 @@
-// module 
+//How to attach an icon to a cursor?
+.cursor-icon {
+    z-index: 1000;
+    color: red;
+    font-size: 2em;
+  }
+
+ 
 :root {
 	--star-size: 20px;
 	--star-color: #fff;
