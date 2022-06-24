@@ -1,11 +1,15 @@
 //How to attach an icon to a cursor?
-.cursor-icon {
-    z-index: 1000;
-    color: red;
-    font-size: 2em;
-  }
 
- 
+.cursor-icon {
+	@media screen and (max-width:1200px) {
+		display: none;
+	}
+	
+	z-index: 1000;
+	color: red;
+	font-size: 2em;
+}
+
 :root {
 	--star-size: 20px;
 	--star-color: #fff;
@@ -2324,27 +2328,18 @@
 	
 			&:hover {
 				color: #23192D;
-			
 			  }
 			&.active {
 				color: #23192D;
 				position: relative;
+				border-bottom: 0.3rem solid #2065c0;
 				&::after{
-					width: 60%;
+						content: "";
+						width: 60%;
+						
 					}
 				}
-				&::after{
-					content: "";
-					position: absolute;
-					bottom: 0;
-					right: 0;
-					width: 0;
-					border-bottom: 0.3rem solid #2065c0;
-					transition: all 0.7s ease;
-					transform: translateX(-50%);
-					-webkit-transition: all 0.3s ease;
-					-webkit-transform: translateX(-50%);
-				}
+			
 			}
 		}
 	.products {
