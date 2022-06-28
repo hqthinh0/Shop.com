@@ -2537,3 +2537,71 @@
 	padding: 3rem 0;
     border-top: 1px solid;
 }
+
+
+.faq-section{
+	margin: 3rem 0;
+	& h1{
+		font-size: 1.429rem;
+		border-bottom: 1px solid #cccccc;
+		padding: 0.5em 0;
+		margin: 1rem 0;
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		&::before{
+			content: "";
+			background: url(../images/question.png) no-repeat;
+			background-size: 100%;
+			width: 25px;
+			height: 25px;
+			margin-right: 0.5rem;
+		}
+	}
+	.collapse-link{
+		padding: 0.5rem;
+		border-bottom: 1px solid #e3e3e3;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: #000000;
+		cursor: pointer;
+		&.active{
+			&::after{
+				content: "\f068";
+			}
+		}
+		&::after{
+			margin-left: 0.5em;
+			font-size: 1.25em;
+			font-family: "FontAwesome";
+			font-weight: 900;
+			content: "\f067";
+			color: #006ab5;
+		}
+	}
+	.faq-item__body{
+		margin: 1rem 0;
+		padding: 1rem 2rem;
+		background: #f1f1f1;
+
+		& p{
+			position: relative;
+			margin: 1rem 0;
+			&::before{
+				content: "";
+				background: url(../images/answer.png) no-repeat;
+				background-size: 100%;
+				width: 25px;
+				height: 25px;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 0.5rem;
+			}
+		}
+	}
+	.collapse{
+		display: none;
+	}
+}
