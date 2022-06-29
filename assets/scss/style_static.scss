@@ -1306,7 +1306,6 @@
 	&-headerText {
 		color: var(--app-content-main-color);
 		font-size: $font-large;
-		padding: 0 20px;
 		line-height: 32px;
 		margin: 0;
 	}
@@ -1315,7 +1314,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0 20px;
 		margin-bottom: 2rem;
 		
 		&-wrapper {
@@ -1638,7 +1636,7 @@
   .gridView {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 -8px;
+	margin: 0 -20px;
 	
 	@media screen and (max-width: 520px) {&{
 	  margin: 0;
