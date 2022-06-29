@@ -646,438 +646,72 @@
 }
 
 .banner__slider{
-	.slider, .slide {
-			@media  screen and (min-width: 769px) {
-				height: 58vh;
-			}
-			height: 30vh;
-		}
-		.slide {
-			position: relative;
-			transition: 1s;
-			.slide__img {
-				@media  screen and (max-width: 769px) {
-					height: auto;
-				}
-				width: 100%;
-				position: absolute;
-				top: 50%;
-				height: auto;
-				max-height: 100%;
-				left: 0;
-				transform: translateY(-50%);
-				overflow: hidden;
-				img {
-					max-width: 100%;
-					height: auto;
-					opacity: 1;
-					animation-duration: 3s;
-					transition: all 1s ease;
-				}
-			}
-			.slide__content {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				@media screen and (max-width: 768px) {
-					width: 75%;
-				}
-				&.slide__content__left{
-					left: 15%;
-					transform: translate(-5%, -50%);
-					@media screen and (max-width: 376px) {
-						left: 21%;
-					}
-				}
-				&.slide__content__right{
-					right: 15%;
-					left: auto;
-					transform: translate(5%, -50%);
-					@media screen and (max-width: 376px) {
-						right: 21%;
-					}
-				}
-				&--headings {
-					color: #FFF;
-					h2 {
-						@media screen and (min-width:769px) {
-							font-size: 40px;
-						}
-						font-size: 25px;
-						margin: 10px 0;
-					}
-					.animated {
-						transition: all .5s ease;
-					}
-					.top-title{
-						font-family: 'Playball', cursive;
-						@media screen and (min-width:769px) {
-							font-size: 25px;
-						}
-						font-size: 15px;
-						
-					}
-					.title{
-						@media screen and (min-width:769px) {
-							font-size: 25px;
-						}
-						font-size: 15px;
-					}
-					.button-custom{
-						text-decoration: none;
-						color: #333;
-						
-						border-radius: 0;
-						min-width: auto;
-						@media screen and (min-width:769px) {
-							font-size: 15px;
-							padding: 22px 35px;
-						}
-						font-size: 10px;
-						padding: 14px 25px;
-					}
-				}
-			}
-		}
-	// Change animation presets
-	.slider{
-		& .slick-active{
-			& [data-animation-in] {
-				opacity: 1;
-			}
-			& .text-left {
-				& .top-title[data-animation-in]{
-					animation-delay: 0.2s;
-				}
-				& [data-animation-in]{
-					animation: fadeInRight 1s ease-in-out;
-					animation-duration: 1.5s;
-				}
-				& [data-animation-in="fadeInUp"]{
-					animation-name: fadeInUp;
-					-webkit-animation-name: fadeInUp;
-				}
-			} 
-			& .text-center {
-				& .top-title[data-animation-in]{
-					animation-delay: 0.2s;
-				}
-				& [data-animation-in]{
-					animation: fadeInUp 1s ease-in-out;
-					animation-duration: 1.5s;
-				}
-				& [data-animation-in="fadeInLeft"]{
-					animation-name: fadeInLeft;
-					-webkit-animation-name: fadeInLeft;
-				}
-			} 
-			& .text-right {
-				& .top-title[data-animation-in]{
-					animation-delay: 0.2s;
-				}
-				& [data-animation-in]{
-					animation: fadeInLeft 1s ease-in-out;
-					animation-duration: 1.5s;
-				}
-				& [data-animation-in="fadeInUp"]{
-					animation-name: fadeInUp;
-					-webkit-animation-name: fadeInUp;
-				}
-			}
-		}
-		& [data-animation-in] {
-			opacity: 0;
-			animation-duration: 1.5s;
-			transition: opacity 0.5s ease 0.3s;
-			transition:1s;
-		}
-	}
-	.slick-dotted .slick-slider {
-		margin-bottom: 30px;
-	}
-	.slick-dots {
-		position: absolute;
-		bottom: 25px;
-		list-style: none;
-		display: block;
-		text-align: center;
-		padding: 0;
-		margin: 0;
-		width: 100%;
-		li {
-			position: relative;
-			display: inline-block;
-			margin: 0 5px;
-			padding: 0;
-			cursor: pointer;
-			button {
-				border: 0;
-				display: block;
-				outline: none;
-				line-height: 0px;
-				font-size: 0px;
-				color: transparent;
-				padding: 5px;
-				cursor: pointer;
-				transition: all .3s ease;
-				&:hover, &:focus {
-					outline: none;
-				}
-			}
-		}
-	}
-	.simple-dots {
-		.slick-dots {
-			li {
-			width: 20px;
-			height: 20px;
-			button {
-				border-radius: 50%;
-				background-color: #fff;
-				opacity: 0.25;
-				width: 20px;
-				height: 20px;
-				&:hover, &:focus {
-				opacity: 1;
-				}
-			}
-			&.slick-active button {
-				color: #fff;
-				opacity: 0.75;
-				}
-			}
-		}
-	}
 
-		@keyframes zoomInImage {
-			from {
-				transform: scale3d(1, 1, 1);
-				transition:2s;
-			}
-			to {
-				transform: scale3d(1.1, 1.1, 1.1);
-				transition:2s;
-			}
-			}
-			
-			@keyframes zoomOutImage {
-			from {
-				transform: scale3d(1.1, 1.1, 1.1);
-				transition:2s;
-			}
-			to {
-				transform: scale3d(1, 1, 0.7);
-				transition:2s;
-			}
-		}
-		
 
-		
-		
-		.slick-nav {
-		
-				width: 44px;
-				height: 44px;
-				position: absolute;
-				cursor: pointer;
-				top: calc(50% - 44px);
 
-	
-			&.prev-arrow {
-					left: 3%;
-					transform: scaleX(-1);
-					z-index: 99;
-			}
-			&.next-arrow{
-				left: auto;
-				right: 3%;
-			}
-			i {
-				display: block;
-				position: absolute;
-				margin: -10px 0 0 -10px;
-				width: 20px;
-				height: 20px;
-				left: 50%;
-				top: 50%;
-				&:before,
-				&:after {
-					content: '';
-					width: 10px;
-					height: 2px;
-					border-radius: 1px;
-					position: absolute;
-					left: 50%;
-					top: 50%;
-					background: var(--active);
-					margin: -1px 0 0 -5px;
-					display: block;
-					transform-origin: 9px 50%;
-				}
-				&:before {
-					transform: rotate(-40deg);
-				}
-				&:after {
-					transform: rotate(40deg);
-				}
-			}
-			&:before,
-			&:after {
-				content: '';
-				display: block;
-				position: absolute;
-				left: 1px;
-				right: 1px;
-				top: 1px;
-				bottom: 1px;
-				border-radius: 50%;
-				border: 2px solid var(--border);
-			}
-			svg {
-				width: 44px;
-				height: 44px;
-				display: block;
-				position: relative;
-				z-index: 1;
-				color: var(--active);
-				stroke-width: 2px;
-				stroke-dashoffset: 126;
-				stroke-dasharray: 126 126 0;
-				transform: rotate(0deg);
-			}
-			&.animate {
-				svg {
-					animation: stroke 1s ease forwards .3s;
-				}
-				i {
-					animation: arrow 1.6s ease forwards;
-					&:before {
-						animation: arrowUp 1.6s ease forwards;
-					}
-					&:after {
-						animation: arrowDown 1.6s ease forwards;
-					}
-				}
-			}
-		}
-		
-		@keyframes stroke {
-			52% {
-				transform: rotate(-180deg);
-				stroke-dashoffset: 0;
-			}
-			52.1% {
-				transform: rotate(-360deg);
-				stroke-dashoffset: 0;
-			}
-			100% {
-				transform: rotate(-180deg);
-				stroke-dashoffset: 126;
-			}
-		}
-		
-		@keyframes arrow {
-			0%,
-			100% {
-				transform: translateX(0);
-				opacity: 1;
-			}
-			23% {
-				transform: translateX(17px);
-				opacity: 1;
-			}
-			24%,
-			80% {
-				transform: translateX(-22px);
-				opacity: 0;
-			}
-			81% {
-				opacity: 1;
-				transform: translateX(-22px);
-			}
-		}
-		
-		@keyframes fadeInUp {
-		from {
-			transform: translate3d(0,40px,0)
-		}
+// Design Slider
+.slider, .slide {
+  @media (min-width: 992px) {
+    height: 80vh;
+  }
+}
 
-		to {
-			transform: translate3d(0,0,0);
-			opacity: 1
+.slide {
+  position: relative;
+  .slide__img {
+    @media (min-width: 992px) {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+      height: auto;
+      opacity: 1 !important;
+      animation-duration: 3s;
+      transition: all 1s ease;
+    }
+  }
+  .slide__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &--headings {
+      text-align: center;
+      color: #FFF;
+      h2 {
+		@media screen and (min-width:769px) {
+			font-size: 4.5rem;
 		}
-	}
+        font-size: 3.5rem;
+        margin: 10px 0;
+      }
+      .animated {
+        transition: all .5s ease;
+      }
+    }
+  }
+}
 
-	@-webkit-keyframes fadeInLeft {
-		0% {
-			opacity: 0;
-			-webkit-transform: translateX(-20px);
-		}
-		100% {
-			opacity: 1;
-			-webkit-transform: translateX(0);
-		}
-		}
-		
-		@keyframes fadeInLeft {
-		0% {
-			opacity: 0;
-			transform: translateX(-200px);
-		}
-		100% {
-			opacity: 1;
-			transform: translateX(0);
-		}
-		}
-		
-	@-webkit-keyframes fadeInUp {
-		from {
-			transform: translate3d(0,40px,0)
-		}
+// Change animation presets
+.slider [data-animation-in] {
+    animation-duration: 1.5s;
+    transition: opacity 0.5s ease 0.3s;
+}
 
-		to {
-			transform: translate3d(0,0,0);
-			opacity: 1
-		}
-	}
+// Dots
+.slick-arrow {
+    display: none !important;
+}
 
-		
-		@keyframes arrowDown {
-			0%,
-			100% {
-				transform: rotate(40deg) scaleX(1);
-			}
-			20%,
-			80% {
-				transform: rotate(0deg) scaleX(.1);
-			}
-		}
-		@keyframes fadeInRight {
-		from {
-			opacity: 0;
-			transform: translateX(200px);
-		}
-		to {
-			opacity: 1;
-		}
-		}
-		.btn-light{
-		color: #212529;
-		background-color: #f8f9fa;
-		border-color: #f8f9fa;
-		}
-		.btn-success{
-		color: #fff;
-		background-color: #28a745;
-		border-color: #28a745;
-		}
-		.text-center{
-			text-align: center;
-		}
-		.text-right{
-			text-align: right;
-		}
+
+
+
 }
 
 

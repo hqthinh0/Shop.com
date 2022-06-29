@@ -420,21 +420,17 @@ $(function(){
 
 });
 
-$(function(){
-	$("#slider").slick({
-	  autoplay: true,
-	  speed: 1000,
-	  arrows: false,
-	  asNavFor: "#thumbnail_slider"
-	});
-	$("#thumbnail_slider").slick({
-	  slidesToShow: 5,
-	  speed: 1000,    
-	  asNavFor: "#slider",
-	  focusOnSelect: true,
-	});
+$(document).ready(function(){
+  
+    $('.slider').slick({
+        autoplay: true,
+        speed: 800,
+        lazyLoad: 'progressive',
+        arrows: false,
+      }).slickAnimation();
+      
+    
   });
-
 
 
 $(function(){
