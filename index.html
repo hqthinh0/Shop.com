@@ -24,41 +24,9 @@
 
 </head>
 <body>
-    <!-- <div id="loadding"  class="bg">
-		<div class="spinner-box">
-			<div class="solar-system">
-				<div class="neptune-orbit orbit">
-					<div class="planet neptune"></div>
-					<div class="uranus-orbit orbit">
-						<div class="planet uranus"></div>
-						<div class="saturn-orbit orbit">
-							<div class="planet saturn"></div>
-							<div class="jupiter-orbit orbit">
-								<div class="planet jupiter"></div>
-								<div class="mars-orbit orbit">
-									<div class="planet mars"></div>
-									<div class="earth-orbit orbit">
-										<div class="planet earth"></div>
-										<div class="venus-orbit orbit">
-											<div class="planet venus"></div>
-											<div class="mercury-orbit orbit">
-											<div class="planet mercury"></div>
-											<div class="sun"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			</div>
-			<div class="loading-line">
-			  <div class="loading-text">0%</div>
-			<div class="line"></div>
-			</div>
-	</div> -->
+    <div class="bg">
+        <div class="loader"></div>
+    </div>
 <div id="l-document">
 	<header id="l-header" class="l-header <?php if (isset($is_simple)) echo 'is-header-simple' ?>">
 		<div class="l-header__wrapper">
@@ -115,7 +83,7 @@
                 </div>
               </div>
 		</section>
-		<section>
+		<section class="js-animation fadeInUp">
 			<div class="wrp-container">
 				<h2 class="hdg-lv2 hdg-lv2--underbar">
 					<span>Thời trang mùa đông</span>
@@ -159,13 +127,13 @@
 			</div>
 			
 		</section>
-		<section>
+		<section class="js-animation fadeInUp">
 			<div class="wrp-container">
 				<h2 class="hdg-lv2 hdg-lv2--underbar">
 					<span>Thời trang mùa hè</span>
 					<a href="★★★" class="link-common" target="_blank">Nhấn vào đây</a>
 				</h2>
-				<div class="box-card box-card--noframe grid-row">
+				<div class="box-card box-card--noframe grid-row" >
 					<div class="grid-col--4 box-card__item ">
 						<a href="★★★" class="js-matchheight" target="_blank">
 							<div class="box-card__img">
@@ -202,7 +170,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="products-wrapper">
+		<section class="products-wrapper js-animation fadeInUp ">
 			<div class="wrp-container">
 				<h2 class="hdg-lv2 hdg-lv2--center"><span>Sản Phẩm Bán Chạy Nhất</span></h2>
 				<div class="app-content">
@@ -319,7 +287,7 @@
 					</div>
 			</div>
 		</section>
-        <section class="sec_contact">
+        <section class="sec_contact js-animation fadeInUp">
 			<div class="wrp_container">
 				<div class="box_contact">
 					<div class="box_contact_text">
@@ -363,7 +331,7 @@
 
 </div><!-- /#document -->
 <!-- <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/include/c-common-html.inc');?> -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="assets/js/vendors.min.js"></script>
 <script src="assets/js/utils.js"></script>
 <script src="assets/js/slick.js" ></script>

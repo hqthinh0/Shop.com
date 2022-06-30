@@ -40,6 +40,70 @@ Table of Contents (common css)
 		3-6. Project
 [4. Print Style]
 
+/* Animation */
+.animated {
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+}
+
+.fadeIn{
+	opacity: 0;
+}
+.animated.fadeIn{
+	opacity: 1;
+}
+
+.fadeInUp{
+	opacity: 0;
+	transform: translateY(20px);
+	filter: blur(20px);
+	filter: brightness(110%);
+}
+.animated.fadeInUp{
+	opacity: 1;
+	transform: translateY(0);
+	filter: blur(0);
+	filter: brightness(100%);
+}
+
+.fadeInDown{
+	opacity: 0;
+	transform: translateY(-20px);
+	filter: blur(20px);
+	filter: brightness(110%);
+}
+.animated.fadeInDown{
+	opacity: 1;
+	transform: translateY(0);
+	filter: blur(0);
+	filter: brightness(100%);
+}
+
+.fadeInLeft{
+	opacity: 0;
+	transform: translateX(-20px);
+	filter: blur(20px);
+	filter: brightness(110%);
+}
+.animated.fadeInLeft{
+	opacity: 1;
+	transform: translateX(0);
+	filter: blur(0);
+	filter: brightness(100%);
+}
+
+.fadeInRight{
+	opacity: 0;
+	transform: translateX(20px);
+	filter: blur(20px);
+	filter: brightness(110%);
+}
+.animated.fadeInRight{
+	opacity: 1;
+	transform: translateX(0);
+	filter: blur(0);
+	filter: brightness(100%);
+}
 
 -------------------------------------------------- */
 

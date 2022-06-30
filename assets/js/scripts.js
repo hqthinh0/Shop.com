@@ -383,6 +383,33 @@ if(document.readyState !== 'loading') {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
+if ($('.js-animation').get(0)) {
+	function jsScrollAnimation() {
+		var $winHeight = $(window).height();
+		$('.js-animation').each(function(){
+			var $this = $(this);
+			var $thisOffset = $this.offset().top;
+			if($winHeight > $thisOffset) {
+				$this.addClass('animated');
+				var value = $this.attr("data-delay");
+				$this.css('transition-delay', value + 's');
+			}
+		});
+		$(window).scroll(function(){
+			$('.js-animation').each(function(){
+				var $this = $(this);
+				var $thisOffset = $this.offset().top;
+				var $topOffset = $(window).scrollTop() + ($winHeight * 0.8);
+				if($topOffset > $thisOffset) {
+					$this.addClass('animated');
+					var value = $this.attr("data-delay");
+					$this.css('transition-delay', value + 's');
+				}
+			});
+		});
+	}
+	jsScrollAnimation();
+}
 
 
 /*
@@ -394,43 +421,15 @@ if(document.readyState !== 'loading') {
 
 $(function(){
 	$('.slider').slick({
-		autoplay: true,
-		speed: 800,
-		lazyLoad: 'progressive',
-		arrows: true,
-		dots: false,
-		prevArrow: '<div class="slick-nav prev-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
-		nextArrow: '<div class="slick-nav next-arrow"><i></i><svg><use xlink:href="#circle"></svg></div>',
-
-		});
-		$('.slick-nav').on('click touch', function(e) {
-			e.preventDefault();
-
-			let arrow = $(this);
-
-			if(!arrow.hasClass('animate')) {
-				arrow.addClass('animate');
-				setTimeout(() => {
-					arrow.removeClass('animate');
-				}, 1600);
-			}
-
-	});
-
-
-});
-
-$(document).ready(function(){
-  
-    $('.slider').slick({
         autoplay: true,
         speed: 800,
         lazyLoad: 'progressive',
         arrows: false,
-      }).slickAnimation();
+      });
       
-    
-  });
+	$(".slider").not('.slick-initialized').slick()
+});
+
 
 
 $(function(){
@@ -568,3 +567,26 @@ $(function() {
      });
   });
 
+
+
+
+
+  $(function() {
+
+	let bg = document.querySelector('.bg'),
+	html = document.querySelector('html'),
+	loadingDuration = 1000;
+	html.style.overflow = 'hidden';
+
+
+	setTimeout(_ => {
+	bg.style.display = 'none';
+	html.style.overflow = 'auto';
+	},loadingDuration);
+
+  });
+
+
+  $(document).ready(function(){
+    $(this).scrollTop(0);
+});

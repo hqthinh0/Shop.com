@@ -1725,230 +1725,120 @@
 	}
 }
 
-#loadding{
-	position: fixed;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	flex-direction: column;
-	height: 100vh;
-	overflow: hidden;
-	background: #111111;
-	z-index: 200;
+// start loader
 
 
-/* KEYFRAMES */
+$colors:
+  hsla(337, 84, 48, 0.75)
+  hsla(160, 50, 48, 0.75)
+  hsla(190, 61, 65, 0.75)
+  hsla( 41, 82, 52, 0.75);
+$size: 2.5em;
+$thickness: 0.5em;
 
-@keyframes spin {
-	from {
-		transform: rotate(0);
-	}
-	to{
-		transform: rotate(359deg);
-	}
+// Calculated variables.
+$lat: ($size - $thickness) / 2;
+$offset: $lat - $thickness;
+
+.loader {
+//   position: relative;
+  width: $size;
+  position: fixed;
+  z-index: 9999;
+  height: $size;
+  transform: rotate(165deg);
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: $thickness;
+    height: $thickness;
+    border-radius: $thickness / 2;
+    transform: translate(-50%, -50%);
+  }
+  
+  &:before {
+    animation: before 2s infinite;
+  }
+  
+  &:after {
+    animation: after 2s infinite;
+  }
+}
+
+@keyframes before {
+  0% {
+    width: $thickness;
+    box-shadow:
+      $lat (-$offset) nth($colors, 1),
+      (-$lat) $offset nth($colors, 3);
+  }
+  35% {
+    width: $size;
+    box-shadow:
+      0 (-$offset) nth($colors, 1),
+      0   $offset  nth($colors, 3);
+  }
+  70% {
+    width: $thickness;
+    box-shadow:
+      (-$lat) (-$offset) nth($colors, 1),
+      $lat $offset nth($colors, 3);
+  }
+  100% {
+    box-shadow:
+      $lat (-$offset) nth($colors, 1),
+      (-$lat) $offset nth($colors, 3);
+  }
+}
+
+@keyframes after {
+  0% {
+    height: $thickness;
+    box-shadow:
+      $offset $lat nth($colors, 2),
+      (-$offset) (-$lat) nth($colors, 4);
+  }
+  35% {
+    height: $size;
+    box-shadow:
+        $offset  0 nth($colors, 2),
+      (-$offset) 0 nth($colors, 4);
+  }
+  70% {
+    height: $thickness;
+    box-shadow:
+      $offset (-$lat) nth($colors, 2),
+      (-$offset) $lat nth($colors, 4);
+  }
+  100% {
+    box-shadow:
+      $offset $lat nth($colors, 2),
+      (-$offset) (-$lat) nth($colors, 4);
+  }
+}
+
+.bg{
+    background: #fff;
+    display: block;
+    width: 100%;
+    z-index: 99999;
+    height: 100%;
+    position: fixed;
+}
+
+.loader {
+  top: calc(50% - #{$size / 2});
+  left: calc(50% - #{$size / 2});
 }
 
 
-@keyframes configure-clockwise {
-	0% {
-		transform: rotate(0);
-	}
-	25% {
-		transform: rotate(90deg);
-	}
-	50% {
-		transform: rotate(180deg);
-	}
-	75% {
-		transform: rotate(270deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
+//end
 
-/* SOLAR SYSTEM */
-
-.solar-system {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.orbit {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 1px solid #fafbfC;
-	border-radius: 50%;
-} 
-.mercury-orbit {
-	width: 70px;
-	height: 70px;
-	-webkit-animation: spin 3s linear 0s infinite;
-}
-.venus-orbit {
-	width: 90px;
-	height: 90px;
-	-webkit-animation: spin 6s linear 0s infinite;
-}
-.earth-orbit {
-	width: 120px;
-	height: 120px;
-	-webkit-animation: spin 10s linear 0s infinite;
-}
-
-
-.mars-orbit {
-	width: 150px;
-	height: 150px;
-	-webkit-animation: spin 12s linear 0s infinite;
-}
-.jupiter-orbit {
-	width: 180px;
-	height: 180px;
-	-webkit-animation: spin 15s linear 0s infinite;
-}
-.saturn-orbit {
-	width: 210px;
-	height: 210px;
-	-webkit-animation: spin 18s linear 0s infinite;
-}
-.uranus-orbit {
-	width: 240px;
-	height: 240px;
-	-webkit-animation: spin 21s linear 0s infinite;
-}
-.neptune-orbit {
-	width: 270px;
-	height: 270px;
-	-webkit-animation: spin 23s linear 0s infinite;
-}
-
-
-.planet {
-	position: absolute;
-	top: -5px;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background-color: #3ff9dc;
-
-	&.mercury{
-		background-color: #fb5b53
-	}
-	&.venus{
-		background-color: #5e5e5c;
-	}
-	&.mars{
-		background-color: #dec784;
-	}
-	&.jupiter{
-		background-color: #c5c4c0;
-	}
-	&.saturn{
-		background-color: #faee9a;
-	}
-	&.uranus{
-		background-color: #8ca4b0;
-	}
-	&.neptune{
-		background-color: #4a5779;
-	}
-}
-
-.sun {
-	width: 35px;
-	height: 35px;
-	border-radius: 50%;
-	background-color: red;
-}
-
-.leo {
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 50%;
-}
-
-.blue-orbit {
-	width: 165px;
-	height: 165px;
-	border: 1px solid #91daffa5;
-	-webkit-animation: spin3D 3s linear .2s infinite;
-}
-
-.green-orbit {
-	width: 120px;
-	height: 120px;
-	border: 1px solid #91ffbfa5;
-	-webkit-animation: spin3D 2s linear 0s infinite;
-}
-
-.red-orbit {
-	width: 90px;
-	height: 90px;
-	border: 1px solid #ffca91a5;
-	-webkit-animation: spin3D 1s linear 0s infinite;
-}
-
-.white-orbit {
-	width: 60px;
-	height: 60px;
-	border: 2px solid #ffffff;
-	-webkit-animation: spin3D 10s linear 0s infinite;
-}
-
-.w1 {
-	transform: rotate3D(1, 1, 1, 90deg);
-}
-
-.w2 {
-	transform: rotate3D(1, 2, .5, 90deg);
-}
-
-.w3 {
-	transform: rotate3D(.5, 1, 2, 90deg);
-}
-
-	.three-quarter-spinner {
-		width: 50px;
-		height: 50px;
-		border: 3px solid #fb5b53;
-		border-top: 3px solid transparent;
-		border-radius: 50%;
-		animation: spin .5s linear 0s infinite;
-	}
-
-	.loading-line{
-		text-align: center;
-		width: 400px;
-		height: fit-content;
-		display: flex;
-		color: #fff;
-		flex-direction: column;
-	}
-		.line {
-		margin-top: 8px;
-		width: 100%;
-		height: 40px;
-		background-color: white;
-		animation: loading 7s linear;
-		animation-iteration-count: infinite;
-		}
-		@keyframes loading {
-		0% {
-			width: 0%;
-		}
-		100% {
-			width: 100%;
-		}
-	}
-
-}
 
 
 // collections
